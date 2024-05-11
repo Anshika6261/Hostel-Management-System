@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="logof.png" type="image/x-icon">
+    <title>Hostel Management Concern</title>
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      
+      .bgImage {
+            position: relative;
+            width: 100%;
+            height: 190vh; /* Adjust height as needed */
+            background-image: url('hostel_management4.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+        }
+        body {
+            font-family: Arial, sans-serif;
+          }
+          .container {
+            max-width: 1000px;
+            /* margin: 0 auto; */
+          }
+          .body1 {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+          }
+          .heading{
+              display:flex;
+              justify-content: center;
+          }
+          label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+          }
+          input[type="text"],
+          select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+          }
+          .submit{
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+          }
+          .submit:hover {
+            background-color: #45a049;
+          }
+          .signature-box {
+            margin-top: 20px;
+            display: flex;
+            justify-content:space-around;
+          }
+          .signature-box label {
+            display: inline-block;
+            margin-right: 20px;
+            justify-content: left;
+          }
+          .signature-box input[type="text"] {
+            width: 200px;
+            display:flex;
+            justify-content: right;
+          }
+          .logo1{
+              width:100px;
+              display: block;
+              margin: 0 auto;
+          }
+          .head1{
+              display:flex;
+              justify-content: center;
+          }
+          .head2{
+              display:flex;
+              justify-content: center;
+          }
+      /* Custom CSS for footer */
+      footer {
+          background-color: #343a40;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+      }
+
+      .footer-text {
+          font-size: 14px;
+      }
+
+      .nav-item.dropdown .nav-link {
+          background-color: #ea9797 !important; /* Change to your desired color */
+          border-radius: 20px;
+      }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">HostelEaze</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  style="margin-right: 10px;"
+              ><img src="notification.png" style="height: 25px;" onclick="location.href='./notification.html'"><span
+                class="position-absolute top-3 start-2 translate-middle badge rounded-pill bg-danger"
+              >
+                9+
+                <span class="visually-hidden">unread messages</span>
+              </span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Complaint
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="complaint.html">Complaint</a></li>
+              <li><a class="dropdown-item" href="status.html">Complaint Status</a></li>
+              <!-- <li><hr class="dropdown-divider" /></li> -->
+              <li>
+                <a class="dropdown-item" href="permission.html">Permission</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="application.html">Application</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="concern.html">Concern</a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"><img src="call.png" style="height: 25px; margin-right: 5px;">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+      <div class="bgImage" style="padding-top: 30px;">
+      <div class="container">
+        <form class="body1">
+        <h1 class="heading">Shri G. S. Institute of Technology & Science, Indore</h1>
+        <!-- <img class="logo1" src="logo.jpeg" alt="logo"> -->
+        <h3 class="head1" >Girls Hostel</h3>
+        <h3 class="head2" >Application Form</h3>
+          <!-- <label for="formNo">Application Form No.</label>
+          <input type="text" id="formNo" name="formNo">
+     -->
+          <label for="studentName">Name of the Student</label>
+          <input type="text" id="studentName" name="studentName">
+    
+          <label for="year">Year</label>
+          <input type="text" id="year" name="year">
+    
+          <label for="roomNo">Room No.</label>
+          <select id="roomNo" name="roomNo">
+            <option value="SNGH/">SNGH/</option>
+            <option value="DAGH/">DAGH/</option>
+          </select>
+          <input type="text" id="roomNo" name="roomNo">
+    
+          <label for="transport">Mode of Transport</label>
+          <input type="text" id="transport" name="transport">
+    
+          <label for="leaveDate">Date and Time of Leaving</label>
+          <input type="text" id="leaveDate" name="leaveDate">
+    
+          <label for="returnDate">Date and Time of returning</label>
+          <input type="text" id="returnDate" name="returnDate">
+    
+          <label for="leaveAddress">Leaving Address</label>
+          <input type="text" id="leaveAddress" name="leaveAddress">
+    
+          <label for="reason">Reason for Leaving</label>
+          <textarea id="reason" name="reason" rows="4"></textarea>
+    
+          <label for="contactInfo">Contact Information</label>
+          <input type="tel" name="phone" id ="phone">
+          
+          <div class="signature-box">
+            <!-- <label for="wardenSignature">Warden Signature</label>
+            <input type="text" id="wardenSignature" name="wardenSignature"> -->
+            
+            <!-- <label for="studentSignature">Student Signature</label>
+            <input type="text" id="studentSignature" name="studentSignature"> -->
+          </div>
+    
+          <button class="submit" type="button" onclick="location.href='./index.html'" >Submit</button>
+        </form>
+      </div>
+    </div>
+    
+
+    
+      
+    
+      <footer style="padding: 20px 0; margin-top: 20px; background-color: #333; color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contact Us</h5>
+                    <p>Email: contact@example.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                    <p>Address: 123 Street, City, Country</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Feedback</h5>
+                    <p>We value your feedback!</p>
+                    <a href="#" class="btn btn-primary">Leave Feedback</a>
+                </div>
+            </div>
+        </div>
+      </footer>
+
+    
+
+
+</body>
+
+</html>

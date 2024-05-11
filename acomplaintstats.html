@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="logof.png" type="image/x-icon">
+    <title>Hostel Management/Permission</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      .nav-item.dropdown .nav-link {
+          background-color: #ea9797 !important; /* Change to your desired color */
+          border-radius: 20px;
+      }
+      .bgImage {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Adjust height as needed */
+            background-image: url('hostel_management4.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          background-color: rgb(240, 239, 239);
+          height: auto;
+        }
+        .container {
+          max-width: 600px;
+          margin: 50px auto;
+          background-color: #ffffffed;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .application {
+          margin-bottom: 20px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-right: 20px;
+          
+        }
+        .field-value {
+          margin-bottom: 10px;
+          padding: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #f9f9f9;
+        }
+        .buttons {
+          display: flex;
+          gap: 10px;
+        }
+        .buttons button {
+          flex: 1;
+        }
+        .application-container {
+          max-width: 900px;
+          
+      }
+      select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #c7babae4;
+      }
+      #reason{
+        background-color: azure;
+      }
+      .submit1 {
+            background-color: #4bdc35;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+        .submit1 {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HostelEaze</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="adminhome.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aNotification.html" style="margin-right: 10px;"
+                  ><img src="notification.png" style="height: 25px;"><span
+                    class="position-absolute top-3 start-2 translate-middle badge rounded-pill bg-danger"
+                  >
+                    9+
+                    <span class="visually-hidden">unread messages</span>
+                  </span></a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Student
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="acomplaintstats.html">Complaint Status</a></li>
+                  <li>
+                    <a class="dropdown-item" href="aPermission.html">Permission</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="aApplication.html">Application</a>
+                  </li>
+    
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aContact.html"><img src="call.png" style="height: 25px; margin-right: 5px;">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+  <div class="bgImage" style="padding-top: 30px; height:100px"> </div>
+    <div class="container">
+      <h1>Complaint Status </h1>
+      <div class="application-container">
+        <div class="application">
+          <div> 
+            <label for="studentName1">Student Name:</label> <span class="field-value" id="studentName1" style="margin-left: 5px;" >Stuti Badola</span>
+            
+            
+            <label for="roomNo1"  style="margin-left: 100px;">Room Number:</label> <span class="field-value" id="roomNo1" style="margin-left: 5px;">123</span>
+            </div>
+            
+            <label for="complaint1">Complaint:</label>
+            <div class="field-value" id="complaint1">Tubelight of the room is not working</div>
+        
+            <label for="status">Status:</label>
+      <select id="status" onchange="showReasonField()">
+        <option value="resolved">Resolved</option>
+        <option value="unresolved">Unresolved</option>
+      </select>
+      <div id="reasonField" style="display: none;">
+        <label for="reason">Reason:</label>
+        <textarea id="reason" rows="4" cols="50"></textarea>
+      </div>
+      <script>function showReasonField() {
+        var status = document.getElementById("status").value;
+        var reasonField = document.getElementById("reasonField");
+        if (status === "unresolved") {
+          reasonField.style.display = "block";
+        } else {
+          reasonField.style.display = "none";
+        }
+      }</script>
+      
+      <button type="submit" class="submit1">Submit</button>
+        </div>
+        
+        <div class="application">
+          <div> 
+            <label for="studentName1">Student Name:</label> <span class="field-value" id="studentName1" style="margin-left: 5px;" >Ashu Singh</span>
+            
+            
+            <label for="roomNo1"  style="margin-left: 100px;">Room Number:</label> <span class="field-value" id="roomNo1" style="margin-left: 5px;">128</span>
+            </div>
+            
+            <label for="complaint1">Complaint:</label>
+            <div class="field-value" id="complaint1">Fan of the room is not working</div>
+        
+            <label for="status">Status:</label>
+      
+        <select id="status" onchange="showReasonField()">
+        <option value="resolved">Resolved</option>
+        <option value="unresolved">Unresolved</option>
+       </select>
+
+      <div id="reasonField" style="display: none;">
+        <label for="reason">Reason:</label>
+        <textarea id="reason" rows="4" cols="50"></textarea>
+      </div>
+
+      <script>function showReasonField() {
+        var status = document.getElementById("status").value;
+        var reasonField = document.getElementById("reasonField");
+        if (status === "unresolved") {
+          reasonField.style.display = "block";
+        } else {
+          reasonField.style.display = "none";
+        }
+      }</script>
+      <button type="submit" class="submit1">Submit</button>
+        </div>
+        
+        <div class="application">
+          <div> 
+            <label for="studentName1">Student Name:</label> <span class="field-value" id="studentName1" style="margin-left: 5px;" >Akshita Sinha</span>
+            
+            
+            <label for="roomNo1"  style="margin-left: 100px;">Room Number:</label> <span class="field-value" id="roomNo1" style="margin-left: 5px;">12</span>
+            </div>
+            
+            <label for="complaint1">Complaint:</label>
+            <div class="field-value" id="complaint1">Fan of the room is not working</div>
+        
+            <label for="status">Status:</label>
+
+      <select id="status" onchange="showReasonField()">
+        <option value="resolved">Resolved</option>
+        <option value="unresolved">Unresolved</option>
+      </select>
+
+      <div id="reasonField" style="display: none;">
+        <label for="reason">Reason:</label>
+        <textarea id="reason" rows="4" cols="50"></textarea>
+      </div>
+      
+      <script>function showReasonField() {
+        var status = document.getElementById("status").value;
+        var reasonField = document.getElementById("reasonField");
+        if (status === "unresolved") {
+          reasonField.style.display = "block";
+        } else {
+          reasonField.style.display = "none";
+        }
+      }</script>
+      <button type="submit" class="submit1">Submit</button>
+        </div>
+        
+    </div>
+    
+  </div>
+        
+        
+        <footer style="padding: 20px; margin-top: 20px; background-color: #333; color: white;">
+          <div class="container1" style="margin-left: 10rem;">
+              <div class="row">
+                  <div class="col-md-6">
+                      <h5>Contact Us</h5>
+                      <p>Email: contact@example.com</p>
+                      <p>Phone: +1 234 567 890</p>
+                      <p>Address: 123 Street, City, Country</p>
+                  </div>
+                  <div class="col-md-6">
+                      <h5>Feedback</h5>
+                      <p>We value your feedback!</p>
+                      <a href="#" class="btn btn-primary">Leave Feedback</a>
+                  </div>
+              </div>
+          </div>
+        </footer>
+      </body>
+      </html>    

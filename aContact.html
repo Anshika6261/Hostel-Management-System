@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="logof.png" type="image/x-icon">
+    <title>Contact Us</title>
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+       .contact {
+          background-color: #ea9797 !important; /* Change to your desired color */
+           border-radius: 20px;
+      } 
+      .bgImage {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Adjust height as needed */
+            background-image: url('hostel_management4.jpg');
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+        }
+      /* Custom CSS for footer */
+
+      footer {
+          background-color: #343a40;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+      }
+
+      .footer-text {
+          font-size: 14px;
+      }
+
+      .open-window {
+          background-color: #ea9797 !important; /* Change to your desired color */
+          border-radius: 20px;
+      }
+      .live-chat-button{
+        padding:7px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color:hsl(27, 8%, 44%);
+        border-radius:10px;
+        font-weight: bold;
+        border-color:black;
+      }
+      .live-chat-button:hover{
+        color:black;
+        background-color: #ea8639;
+        box-shadow: 0px 5px 5px 0px;
+      }
+      .live-chat-button:active{
+        color:white;
+        box-shadow: 0px 20px 20px 0px;
+      }
+  </style>
+</head>
+<body>
+  <div class="bgImage">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HostelEaze</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="adminhome.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aNotification.html" style="margin-right: 10px;"
+                  ><img src="notification.png" style="height: 25px;"><span
+                    class="position-absolute top-3 start-2 translate-middle badge rounded-pill bg-danger"
+                  >
+                    9+
+                    <span class="visually-hidden">unread messages</span>
+                  </span></a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Student
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="acomplaintstats.html">Complaint Status</a></li>
+                  <li>
+                    <a class="dropdown-item" href="aPermission.html">Permission</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="aApplication.html">Application</a>
+                  </li>
+    
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aContact.html"><img src="call.png" style="height: 25px; margin-right: 5px;">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+     
+
+   
+      <div class="container" style="margin: 20px auto; margin-top:40px; margin-bottom: 40px; padding: 20px; height: 83%; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display:flex; flex-direction: rows; flex-wrap: wrap; justify-content: center;">
+        <div style=" flex-grow:1; display:flex; flex-direction: column; justify-content: space-around; margin-left:40px">
+          <div >
+            <h3>Contacts</h3>
+            <div style="color:blue;">+91-8378372832</div>
+            <div style="color:blue;">+91-3849383289</div>
+            <div style="color:blue;">+91-3894923843</div>
+            <div style="margin-bottom:20px; color:blue;">+91-3948782934</div>
+          </div>
+          <div>
+            <h3>Address</h3>
+            <p>Sarojini Naidu Girl's Hostel,</p>
+            <p>Indore,Madhya Pradesh - 425003</p>
+          </div>
+        </div>
+        <div style=" flex-grow:1; display: flex; align-items: center;">
+            <div style=" background-color:  hsl(18, 76%, 89%); height:430px; display: flex; flex-direction:column; border-radius:20px; align-items: center; width:400px">
+              <div style="flex-grow:2; display:flex; justify-content: center;">
+                <img src="chat.svg" style="width:120px">
+              </div>
+              <div style="flex-grow:1; font-size:30px; color:hsl(15, 94%, 61%)">
+                LIVE CHAT
+              </div>
+              <div style="flex-grow:1; font-size:20px; color:hwb(12 43% 53%); font-family:Josefin Sans">
+                Chat with a member of our inhouse team
+              </div>
+              <div style="flex-grow:1">
+                  <button class="live-chat-button">START CHAT</button>
+              </div>
+            </div>
+        </div>
+        <div style="flex-grow:1; display:flex; flex-direction: column; justify-content: space-around;">
+          <div>
+            <h3>Gmail</h3>
+            <div style="color:blue;">xvdfj@gmail.com</div>
+            <div style="color:blue;">elrahid@gmail.com</div>
+            <div style="color:blue;">xvdfj@gmail.com</div>
+            <div style="margin-bottom:20px; color:blue;">elrahid@gmail.com</div>
+          </div>
+          <div>
+            <h3>Social Media</h3>
+            <div>
+                <a href="#" style="color: blue; text-decoration: none;">Facebook</a>
+            </div>
+            <div>
+                <a href="#" style="color: blue; text-decoration: none;">Twitter</a>
+            </div>
+            <div>
+                <a href="#" style="color: blue; text-decoration: none;">Instagram</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <footer style="padding: 20px 0; margin-top: 20px; background-color: #333; color: white;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Contact Us</h5>
+                <p>Email: contact@example.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Address: 123 Street, City, Country</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Feedback</h5>
+                <p>We value your feedback!</p>
+                <a href="#" class="btn btn-primary">Leave Feedback</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  
+
+    
+
+
+</body>
+
+</html>
