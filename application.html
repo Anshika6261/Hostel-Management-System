@@ -215,6 +215,7 @@
           <!-- <label for="formNo">Application Form No.</label>
           <input type="text" id="formNo" name="formNo">
      -->
+         <form name="submit-to-google-sheet">
           <label for="studentName">Name of the Student</label>
           <input type="text" id="studentName" name="studentName">
     
@@ -282,7 +283,26 @@
       </footer>
 
     
-
+<!-- ------for spreadsheet------- -->
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyJDnU4LweOea1kLOIgN5E2iNNSIzWuvlbTfQZ-qCacta80sIphMygM6oKVZK443yvk/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg');
+    
+    
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully";
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 
 </body>
 
